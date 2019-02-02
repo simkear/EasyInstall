@@ -198,7 +198,7 @@ installhacks()
 	echo -n "Downloading Cigamit's Boxee+Hack install script... "
 	curl -L -s $server3/install.sh -o /download/install.sh
 	md5_1=$(md5sum /download/install.sh | awk '{print $1}')
-	md5_2=afda43b02192a73864b278ab600eecfc
+	md5_2=bc56979a0b381a791dd59713198a87fb
 	if [ "$md5_1" != "$md5_2" ]
 	then
 		dialog --clear --backtitle " MD5 checksum error " --title " MD5 checksum error " --no-label " Continue " --yes-label " Exit " --yesno "\nBoxee+Hacks installer MD5 checksum is different then expected.\nSource: $server3/install.sh\nMD5 found:    $md5_1\nMD5 expected: $md5_2\n\nTry again and if the error persists contact me through http://boxeed.in/forums/viewtopic.php?f=5&t=1216" 13 70
